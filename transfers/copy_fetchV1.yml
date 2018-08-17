@@ -1,16 +1,18 @@
 ---
-- name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
+- name: Servidor(es) Origen
   hosts: myservers
   task:
+  - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
     fetch:
-       src: /home/arqsis/UEES/Hector/pruebaTrans.txt
-       dest: /home/centos/Documentos/
-       flat: yes
-- name: Copiar el archivo del/los nodo(s) remoto(s)
+    src: /home/arqsis/UEES/Hector/pruebaTrans.txt
+    dest: /home/centos/Documentos/
+    flat: yes
+- name: Servidor(es) Destino(s)
   hosts: myservers2
   task:
-    copy:
-      #remote_src: yes
-      src: /home/centos/Documentos/
-      dest: /home/oracle/UEES/AARIAS/HJIMENEZ/
-      mode: preserve
+  - name: Copiar el archivo del/los nodo(s) remoto(s)
+  copy:
+   #remote_src: yes
+   src: /home/centos/Documentos/
+   dest: /home/oracle/UEES/AARIAS/HJIMENEZ/
+   mode: preserve
