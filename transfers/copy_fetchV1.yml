@@ -1,7 +1,7 @@
 ---
 - name: Servidor(es) Origen
   hosts: myservers
-  task:
+  tasks:
   - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
     fetch:
        src: /home/arqsis/UEES/Hector/pruebaTrans.txt
@@ -9,7 +9,7 @@
        flat: yes
 - name: Servidor(es) Destino(s)
   hosts: myservers2
-  task:
+  tasks:
   - name: Copiar el archivo del/los nodo(s) remoto(s)
     copy:
       src: /home/centos/Documentos/

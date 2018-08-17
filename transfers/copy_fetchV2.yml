@@ -1,6 +1,6 @@
 ---
 - name: TRANSFERENCIA DE ARCHIVOS
-  task:
+  tasks:
   - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
     hosts: myservers
     fetch:
