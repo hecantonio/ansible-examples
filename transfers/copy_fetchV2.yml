@@ -8,9 +8,9 @@
        dest: /home/centos/Documentos/
        flat: yes
   - name: Copiar el archivo del/los nodo(s) remoto(s)
-    hosts: myservers
+    hosts: myservers2
     copy:
       #remote_src: yes
       src: /home/centos/Documentos/
-      dest: /home/arqsis/UEES/Hector/CLIENTE_PANEL/
+      dest: /home/oracle/UEES/AARIAS/HJIMENEZ/
       mode: preserve
