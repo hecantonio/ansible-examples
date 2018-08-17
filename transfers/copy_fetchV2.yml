@@ -1,0 +1,16 @@
+---
+- name: TRANSFERENCIA DE ARCHIVOS
+  task:
+  - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
+    hosts: myservers
+    fetch:
+       src: /home/arqsis/UEES/Hector/pruebaTrans.txt
+       dest: /home/centos/Documentos/
+       flat: yes
+  - name: Copiar el archivo del/los nodo(s) remoto(s)
+    hosts: myservers
+    copy:
+      #remote_src: yes
+      src: /home/centos/Documentos/
+      dest: /home/arqsis/UEES/Hector/CLIENTE_PANEL/
+      mode: preserve
