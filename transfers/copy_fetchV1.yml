@@ -4,7 +4,7 @@
   tasks:
   - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
     fetch:
-       src: /home/arqsis/UEES/Hector/pruebaTrans.txt
+       src: /home/centos/files/cta_clientes.txt
        dest: /home/centos/Documentos/
        flat: yes
 - name: Servidor(es) Destino(s)
@@ -13,5 +13,5 @@
   - name: Copiar el archivo del/los nodo(s) remoto(s)
     copy:
       src: /home/centos/Documentos/
-      dest: /home/oracle/UEES/AARIAS/HJIMENEZ/
+      dest: /home/centos/files/cdrs/
       mode: preserve
