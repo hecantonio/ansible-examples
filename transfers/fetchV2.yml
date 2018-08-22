@@ -1,0 +1,8 @@
+---
+- hosts: myservers
+  tasks:
+  - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
+    fetch:
+       src: {{ ruta_origen }}
+       dest: {{ruta_destino}}
+       flat: yes
