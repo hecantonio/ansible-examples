@@ -3,6 +3,6 @@
   tasks:
   - name: Obtener el/los archivo(s) de a el/los nodo(s) remoto(s)
     fetch:
-       src: /home/arqsis/UEES/Hector/pruebaTrans.txt
+       src: /home/centos/files/ctas_clientes.txt
        dest: /home/centos/Documentos/
        flat: yes
